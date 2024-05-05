@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Figtree";
+    src: url("./assets/fonts/Figtree-VariableFont_wght.ttf")
+        format("truetype");
+}
+
+:root {
+    --Yellow: hsl(47, 88%, 63%);
+    --White: hsl(0, 0%, 100%);
+    --Gray: hsl(0, 0%, 50%);
+    --Black: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree";
+}
+
+body {
+    background-color: var(--Yellow);
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.main {
+    background-color: var(--White);
+    width: 384px;
+    border-radius: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px;
+    padding: 24px;
+    margin: 80px;
+}
+
+@media (min-width: 721px) {
+
+    .main:hover {
+        box-shadow: 15px 15px;
+        transition: ease 0.09s;
+    }
+
+    .main:not( :hover ) {
+        box-shadow: 5px 5px;
+        transition: ease 0.09s;
+    }
+
+    .tag:hover {
+        cursor: pointer;
+        color: var(--White);
+    }
+
+    .writer:hover,
+    .title h1:hover {
+    color: var(--Yellow);
+    cursor: pointer;
+}
+}
+
+.img {
+    border-radius: 10px;
+    width: fit-content;
+    overflow: hidden;
+    object-fit: fill;
+    display: flex;
+}
+
+.tag {
+    background-color: var(--Yellow);
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 7px 14px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 7px;
+}
+
+.date {
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 12px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.description {
+    color: var(--Gray);
+}
+
+.footer {
+    display: inline-flex;
+    width: fit-content;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.writer {
+    font-weight: bold;
+    /* padding: 10px; */
+    display: flex;
+    align-items: center;
+    padding-left: 14px;
+}
+
+.content {
+    padding: 24px 0;
+}
+
+@media (min-width: 330px) and (max-width: 720px) {
+    .main {
+    width: 327px;
+    margin: 50px;
+    }
+
+    .main:hover {
+        box-shadow: 5px 5px;
+    }
+
+    .img {
+        max-width: 277px;
+    }
+
+    .tag:active {
+        cursor: pointer;
+        color: var(--White);
+    }
+
+    .writer:active,
+    .title h1:active {
+    color: var(--Yellow);
+    cursor: pointer;
+    }
+}
