@@ -24,7 +24,8 @@ body {
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    justify-content: center; /* Add this */
+    min-height: 100dvh; /* Add this */
     align-items: center;
 }
 
@@ -35,10 +36,10 @@ body {
     border: 1px solid black;
     box-shadow: 5px 5px;
     padding: 24px;
-    margin: 80px;
+    /* height: 100%; */
 }
 
-@media (min-width: 721px) {
+@media (min-width: 1367px) {
 
     .main:hover {
         box-shadow: 15px 15px;
@@ -125,16 +126,18 @@ body {
 
 @media (min-width: 330px) and (max-width: 720px) {
     .main {
-    width: 327px;
-    margin: 50px;
-    }
-
-    .main:hover {
-        box-shadow: 5px 5px;
-    }
+        width: 327px;
+        }
 
     .img {
         max-width: 277px;
+    }
+}
+
+
+@media (min-width: 330px) and (max-width: 1366px) {
+    .main:hover {
+        box-shadow: 5px 5px;
     }
 
     .tag:active {
